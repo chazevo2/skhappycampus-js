@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		// 부모창에서 클릭 이벤트 발생시킨 이미지 이름 정보
+		var imgSrc = window.opener.detailImageSrc;
+		
+		// 상세 이미지르 보이기 위한 img 객체 가져오기
+		// 1. id로 가져오기
+		var takeImg = document.getElementById("detail_img");
+		takeImg.src = imgSrc;
+		takeImg.title = "Click Close Img" + imgSrc;
+	}
+</script>
+</head>
+<body>
+<h3>이미지 상세보기</h3>
+	<img id="detail_img" src="" onclick="window.close()" title="Click Close">
+</body>
+</html>

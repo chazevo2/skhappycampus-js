@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이미지 슬라이드</title>
+<!-- css external -->
+<link type="text/css" rel="stylesheet" href="./css/common.css">
+<!-- css internal -->
+<style type="text/css">
+	img.slide {
+		width: 100px;
+		height: 120px;
+	}
+	img.slide:hover {
+		border: solid 3px red;
+		width: 150px;
+		height: 180px;
+	}
+</style>
+
+<script type="text/javascript">
+	var detailImageSrc;
+
+	function detailImage(takeImageSrc) {
+		detailImageSrc = takeImageSrc;
+		window.open("detailImage.html", "detailWindow", "width=200, height=200");
+	}
+</script>
+</head>
+<body>
+	<!-- header menu -->
+	<div>
+		<a href="index.html"><img src="./img/logo.png" alt="로고" title="Go Home"></a>
+	</div>
+	<hr>
+	<div>
+		<a href="login.html">로그인</a> | <a href="signup.html">회원가입</a> | <a href="img_slide.html">이미지 슬라이드</a> | <a href="">아이디/비밀번호 찾기</a>
+	</div>
+	<hr>
+	
+	<h3>이미지 예제</h3><!-- alt : 엑박 대신에 나올 문자 title : 마우스 오버시 정보 -->
+	<img class="slide" src="./img/butterfly-01.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-02.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-02.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-04.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-05.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-06.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-07.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-08.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-09.png" onclick="detailImage(this.src)">
+	<img class="slide" src="./img/butterfly-10.png" onclick="detailImage(this.src)">
+</body>
+</html>
